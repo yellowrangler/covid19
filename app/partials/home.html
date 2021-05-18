@@ -1,0 +1,61 @@
+<div class="container">
+
+<div class="pageStandardOffset">&nbsp;</div>
+  
+<div class="">
+	<div class="row" style="padding-top:0px;">
+		<div style="padding-top:40px;" class="col-md-4">
+			<div>
+				<a id="showpicture" name="showpicture" href="">
+	                <img style="width:100%;" src="img/thinkingman.png" alt="think">
+	            </a>
+			</div>
+			<p style="padding-top:140px;">
+				<a id="loginHomeButton" class="btn btn-primary btn-lg" ng-click="homepagelogin()" role="button">Login</a>
+			</p>
+		</div> <!-- end of col 4 -->
+
+		<div class="col-md-offset-1 col-md-7" style="padding-top:15px;" >
+			<div class="mainTitleLeft">
+				<div id="homemaintitle1">The Covid 19 View</div>
+			</div>
+
+		    <div class="">
+		        <h3 class="headerTitle2">Data here, Data there, Data Data Everywhere</h3>
+		    </div>
+
+		    <div id="homepageNarrative" class="homepageNarrative" ng-include="'app/partials/homepagenarrative.html'">
+		    </div> <!-- end of newsopinion -->	
+
+		    <div style="padding-top:25px;">
+	            <div>
+	        	</div>
+			</div>
+		</div> <!-- end of col 7 -->
+
+	</div> <!-- end of row -->
+</div> <!-- end of class -->
+
+<!-- <div style="padding-top:35px;">&nbsp;</div> -->
+
+</div> <!-- end of container -->
+
+<!-- dialogs -->
+<div class="modal fade" id="homePicShowModal" tabindex="-1" role="dialog" aria-labelledby="homePicSModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title bracketModalTitle" id="homePicShowModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="homePicShowModalBody">
+        	<img ng-src={{showPictureSrc}} class="center-block img-responsive" alt="show picture">
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  

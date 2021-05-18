@@ -1,0 +1,93 @@
+<div class="pageCaption row">
+    <div style="padding-bottom:0px;"  class="col-md-12">
+        <div class="pageCaption">
+            <div style="padding-bottom:0px;">
+                <h2 style="display:inline;" class="headerTitle">Total Percentage Leaders Help</h2>
+                <img ng-init="helpimg='DonalDuckSoldierCanadiangoback.png'" 
+                     ng-mouseover="helpimg='DonalDuckSoldierCanadiangoback.png'" 
+                     ng-mouseout="helpimg='DonalDuckSoldierCanadiangoback.png'"
+                     style="display:inline;float:right;padding-right:8%;height:50px;vertical-align:top;cursor:pointer;" 
+                     ng-click="goBack('/playerstatstotalpercentage')" 
+                     src="img/help/{{helpimg}}">
+            </div>  
+        </div>
+    </div> <!-- end of col -->
+</div> <!-- end of row -->   
+
+<div class="row">
+    <div class="col-md-12 helpStandardOffset">
+        <div class="helpSubTitle">
+            Summary
+        </div>
+
+        <div class="helpText">
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Total Percentage Leaders</span> page is where a member can view member rankings <span style="color:#FF6E3B;font-weight:700;">based on highest percentage game wins</span>. Late comers and members who don't play alot can still find satisfaction in being a leader here!!</p>
+
+            <p>You can select the <span style="color:#FF6E3B;font-weight:700;">Season</span>, <span style="color:#FF6E3B;font-weight:700;">Game Type</span> and <span style="color:#FF6E3B;font-weight:700;">Member Groups</span>. You can also <span style="color:#FF6E3B;font-weight:700;">Show</span> or <span style="color:#FF6E3B;font-weight:700;">Hide</span> the addition of <span style="color:#FF6E3B;font-weight:700;">Experts</span> to the ranking list.</p> 
+
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Experts</span> are football processionals that pick games during the season. We collect their picks and add them so that you can see how you and others compare.</p>
+
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Member Groups</span> are requested name groups of members. If you wish to create a group you must reach out and make a request to us. No Charge! Groups can be last names, club names, school chums anything you want. Selecting a <span style="color:#FF6E3B;font-weight:700;">Member Groups</span> will reset the list to show rankings within that group. You may be fifteenth against full member ranking; But you can be number one in your group! It's all relative.</p>
+
+            <p>The ranking list displays all members in percentage wins ranking order</p>
+        </div>
+    </div> <!-- end of col --> 
+</div> <!-- end of row --> 
+
+<div style="padding-top:40px;" class="row">
+    <div class="col-md-12 helpStandardOffset">
+        <div class="helpSubTitle">
+            Details
+        </div>
+
+        <div class="helpSubTitle2">
+            Selecting and viewing the results
+        </div>
+
+        <div style="padding-bottom:40px;" class="helpText">
+            <p><img ng-src="img/help/playerstatstotalwinsbuttons.png" align="top"></p>
+
+            <p>This is where you can select <span style="color:#FF6E3B;font-weight:700;">Season</span>,  <span style="color:#FF6E3B;font-weight:700;">Game Type</span>, <span style="color:#FF6E3B;font-weight:700;">Member Groups</span> and <span style="color:#FF6E3B;font-weight:700;">Experts</span>.</p>
+
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Season</span> defaults to the current season. Changing the season will bring up rankings associated with that year.</p>
+
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Game Type</span> defaults to the regular season. You can choose <span style="color:#FF6E3B;font-weight:700;">Total Season</span>, <span style="color:#FF6E3B;font-weight:700;">Regular Season</span> or <span style="color:#FF6E3B;font-weight:700;">Post Season</span>.</p>
+
+            <p><span style="color:#FF6E3B;font-weight:700;">Regular Season</span>: This will display the Regular Season rankings. These include only regular season game rankings. No playoffs.</p>
+
+            <p><span style="color:#FF6E3B;font-weight:700;">Post Season</span>: This will display only Post Season game rankings.</p>
+
+            <p><span style="color:#FF6E3B;font-weight:700;">Total Season</span>: This will display the Regular and Post Season rankings.</p>
+
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Member Groups</span> defaults to the no group selected. You can choose any of the groups. Once selected, the rankings will be reordered into group member wins order. If you wish to start a group of your own please feel free to contact us!</p>
+
+            <p>The <span style="color:#FF6E3B;font-weight:700;">Hide Experts</span> or <span style="color:#FF6E3B;font-weight:700;">Show Experts</span> will either hide or show professional football organizations or individuals that we track to give folks a sense of how they compare. You will find retired football coaches, as well as, professional betting resources.</p>
+        </div>
+
+        <div class="helpSubTitle2">
+            Understanding the Ranking List
+        </div>
+
+        <div style="padding-bottom:35px;padding-top:15px;" class="helpText">
+            <p><img  ng-src="img/help/playerstatstotalpercentagelist.png" align="top"></p>
+
+            <p style="padding-top:15px;">Displayed are the members percentage wins rankings for the selected <span style="color:#FF6E3B;font-weight:700;">Season</span> and <span style="color:#FF6E3B;font-weight:700;">Game Type</span>. This example shows four lines from the list.</p>
+
+            <p>The first column is <span style="color:#FF6E3B;font-weight:700;">Rank</span>. It displays the ranking of each member based on percentage wins in descending order of percentage win totals.</p>
+
+            <p>The second column is <span style="color:#FF6E3B;font-weight:700;">Leader</span>. It displays the member icon and screen name of each member. Clicking on the members icon will display a pop up with that members information.</p>
+
+             <p>The third column is <span style="color:#FF6E3B;font-weight:700;">Percent</span>. It displays the members percent for the selected <span style="color:#FF6E3B;font-weight:700;">Season</span> and <span style="color:#FF6E3B;font-weight:700;">Game Type</span>. </p>
+
+             <p>The fourth column is <span style="color:#FF6E3B;font-weight:700;">Games</span>. It displays the number of games that this members picked during <span style="color:#FF6E3B;font-weight:700;">Season</span> and <span style="color:#FF6E3B;font-weight:700;">Game Type</span>. </p>
+        </div>
+
+    </div> <!-- end of col --> 
+</div> <!-- end of row -->    
+
+
+<div style="padding:15px;" class="row">
+         
+</div> <!-- end of row -->
+
+<div class="row" style="padding-bottom:0px;">&nbsp;</div><!-- end of row -->  

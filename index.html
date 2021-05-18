@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="covid19App">
+<head>
+<title>Covid19 Data Website</title>
+<meta name="description" content="covid19 statistics">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/ui-grid-stable.css" rel="stylesheet">
+
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+<link href="http://fonts.googleapis.com/css?family=IM+Fell+English" type="text/css" rel="stylesheet" >
+<link href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700'|Damion|Pacifico|Lusitana|Tangerine|Cormorant+Garamond|Balthazar|Indie+Flower|Josefin+Sans|Lato:100,300,400,700|Open+Sans:300,300i" type="text/css" rel="stylesheet" >
+<!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/> -->
+<link href="css/covid19.css" rel="stylesheet" />
+
+<!-- Vendor Libs -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+<script src="//cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-resource.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-touch.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.14/angular-sanitize.js"></script>
+ 
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+<script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>
+<script src="https://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
+    
+<!-- UI Libs -->
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <script src="script/typeahead.js"></script> -->
+
+<!-- App libs -->
+<script src="app/covid19App.js"></script>
+
+<!-- controllers  -->
+<script src="app/controllers/firstController.js"></script>
+<script src="app/controllers/parenthomeController.js"></script>
+<script src="app/controllers/datareviewController.js"></script>
+<script src="app/controllers/adminController.js"></script>
+<script src="app/controllers/faqsController.js"></script>
+<script src="app/controllers/helpController.js"></script>
+<script src="app/controllers/lastController.js"></script>
+<!-- factories  -->
+<script src="app/factories/loginfactory.js"></script>
+<script src="app/factories/membersfactory.js"></script>
+<script src="app/factories/datareviewfactory.js"></script>
+<script src="app/factories/teamsfactory.js"></script>
+<!-- services  -->
+<script src="app/services/msgservice.js"></script>
+<script src="app/services/loginservice.js"></script>
+<script src="app/services/teamservice.js"></script>
+<script src="app/services/chartservice.js"></script>
+<script src="app/services/selectlistservice.js"></script>
+
+<script src="app/directives/directives.js"></script>
+<script src="app/validations/validate.js"></script>
+
+<!-- <script src="script/snow/js/snow.js"></script> -->
+<script src="script/covid19.js"></script>
+
+</head>
+<body style="background:white;" data-ng-controller="ParentController" >
+<nav style="display:block;" id="nav-bar-menu-bar-tall" role="navigation" class="customNavbar navbar navbar-default fixed">
+    <div class="container-fluid">
+        
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul style="padding-top:7px;" class="nav navbar-nav">
+                <li class="menuItems"><a style="padding-bottom:15px;" class="" href="#/home">
+                <img style="vertical-align:middle;height:90px;padding-right:25px;" class="" src="img/covid19-logo.png">
+                </a></li>
+            </ul>
+
+            <ul class="nav navbar-nav menuTextNav">
+                <li class="menuItems dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                    Data Review & Analysis
+                    <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu multi-level" aria-labelledby="dropdownMenu">
+                        <li><a class="collapsableNavbar" href="#/sql">SQL</a></li>
+                        <li><a class="collapsableNavbar" href="#/charts">Charts</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav menuTextNav">
+                <li >
+                    <a class="" href="#/references">References</a>
+                </li>
+            </ul>
+                
+            <ul class="nav navbar-nav menuTextNav">
+                <li >
+                    <a class="" href="#/faqs">FAQ</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav menuTextNav">
+                <li >
+                    <a class="" href="#/resources">Resources</a>
+                </li>
+            </ul>
+                
+            <ul class="nav navbar-nav menuTextNav">
+                <li >
+                    <a class="" href="#/contact">Contact</a>
+                </li>
+            </ul>    
+
+            <ul id="adminselect" class="nav navbar-nav menuTextNav">
+                <li class="menuItems dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                    Admin
+                    <b class="caret"></b></a>
+                    <ul role="menu" class="dropdown-menu multi-level" aria-labelledby="dropdownMenu">
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">References</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="#/admindatareferences">Data References</a></li>
+                                <li><a class="collapsableNavbar" href="#/admininformation">Information</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li role="presentation" class="divider"></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="">Member Management</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="collapsableNavbar" href="#/addmember">Member Add</a></li>
+                                <li><a class="collapsableNavbar" href="#/updatemember">Member Manage</a></li>
+                                <li><a class="collapsableNavbar" href="#/addavatar">Member Avatar</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li role="presentation" class="divider"></li>
+                        <li><a class="collapsableNavbar" href="#/systemscripts">System Scripts</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+             <ul  class="nav navbar-nav pull-right" >
+                <li style="text-align:center;padding-top:30px;padding-right:20px;">
+                    <div>
+                        <a id="menubaravatarimage" name="menubaravatarimage" class="collapsableNavbar" href="#/memberupdatemember">
+                        <img id="avatarnavimg" name="navAvatarImage" class="img-circle imgAvatarNav" ng-show="memberavatar != ''" ng-src="img/avatars/{{memberavatar}}">
+                        </a>
+                       <!--  <br /> -->       
+                    </div>
+
+                    <div>
+                        <span class="avatarTitle" id="menubaravatar" name="menubaravatar"></span>  
+                    </div>
+                </li>
+            </ul>
+        </div> <!-- end of navbar  -->
+    </div> <!-- end of container fluid -->            
+</nav>
+
+
+<div id="covid19-view" style="padding-top:180px; padding-bottom:100px;background:white;" data-ng-view="" class="topPagePosition"></div>
+
+<div class="covid19-footer">
+        <div class="row">
+            <div class="col-md-offset-6 col-md-6">
+                <span class="standForSomething">If You don't Stand for Something, You will Fall for Anything!</span>  
+            </div> <!-- end of col -->   
+        </div> <!-- end of row -->
+        
+    </div><!-- end of container top -->
+</div> <!-- end of footer -->
+
+
+<!-- dialogs -->
+<div class="modal fade" id="parentAlertModal" tabindex="-1" role="dialog" aria-labelledby="parentAlertModalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="parentAlertModalTitle"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="parentAlertModalBody"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+</body>
+</html>
